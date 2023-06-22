@@ -16,11 +16,29 @@
     opacity: 1;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 section {
   animation: fade-in;
   animation-duration: 3s;
   animation-timing-function: ease;
   animation-fill-mode: both;
+}
+
+.story__article::after, .story h2::after, .site-footer::before, .site-footer::after, #studio h2::before {
+  animation: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.flower-rotation-speedUp {
+  animation-duration: 10s;
 }
 
 /*# sourceMappingURL=style.css.map */
