@@ -1,0 +1,24 @@
+{
+  "name": "foce-child",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/style.scss style.css",
+    "sassDev": "sass -w sass/style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanchaneto/foce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanchaneto/foce/issues"
+  },
+  "homepage": "https://github.com/jeanchaneto/foce#readme",
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}
