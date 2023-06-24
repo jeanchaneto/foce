@@ -1,7 +1,72 @@
-
 section {
-    animation: fade-in;
-    animation-duration: 3s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
+  animation: fade-in;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+#oscar-nomination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+
+  div {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+  .oscar-title-container {
+    width: 643px;
+    background-image: url("./assets/images/Rectangle23.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @media screen and (max-width: 850px) {
+      padding: 0px 0px;
+      width: 300px;
+    }
+  }
+  h3 {
+    color: white;
+    font-size: 42px;
+    line-height: 52px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media screen and (max-width: 900px) {
+      font-size: 16px;
+      line-height: 22px;
+      width: 80vw;
+    }
+  }
+
+  &::before {
+    content: url("./assets/images/Sunflower.png");
+    position: absolute;
+    top: -3em;
+    left: 10em;
+    animation: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+  }
+  &::after {
+    content: url("./assets/images/orchid.png");
+    position: absolute;
+    right: -5em;
+    bottom: 22em;
+    animation: rotate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+  }
 }

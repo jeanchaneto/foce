@@ -1,0 +1,8 @@
+.site-footer {
+  &::before {
+    opacity: 0;
+  }
+  &::after {
+    opacity: 0;
+  }
+}

@@ -31,14 +31,96 @@ section {
   animation-fill-mode: both;
 }
 
+#oscar-nomination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+#oscar-nomination div {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  #oscar-nomination div {
+    flex-direction: column;
+  }
+}
+#oscar-nomination .oscar-title-container {
+  width: 643px;
+  background-image: url("./assets/images/Rectangle23.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media screen and (max-width: 850px) {
+  #oscar-nomination .oscar-title-container {
+    padding: 0px 0px;
+    width: 300px;
+  }
+}
+#oscar-nomination h3 {
+  color: white;
+  font-size: 42px;
+  line-height: 52px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 900px) {
+  #oscar-nomination h3 {
+    font-size: 16px;
+    line-height: 22px;
+    width: 80vw;
+  }
+}
+#oscar-nomination::before {
+  content: url("./assets/images/Sunflower.png");
+  position: absolute;
+  top: -3em;
+  left: 10em;
+  animation: rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@media screen and (max-width: 850px) {
+  #oscar-nomination::before {
+    display: none;
+  }
+}
+#oscar-nomination::after {
+  content: url("./assets/images/orchid.png");
+  position: absolute;
+  right: -5em;
+  bottom: 22em;
+  animation: rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@media screen and (max-width: 700px) {
+  #oscar-nomination::after {
+    display: none;
+  }
+}
+
 .story__article::after, .story h2::after, .site-footer::before, .site-footer::after, #studio h2::before {
   animation: rotate;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .flower-rotation-speedUp {
   animation-duration: 10s;
+}
+
+.site-footer::before {
+  opacity: 0;
+}
+.site-footer::after {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
