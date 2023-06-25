@@ -32,6 +32,17 @@
     transform: translateY(0px);
   }
 }
+@keyframes float {
+  0% {
+    transform: translatex(0px);
+  }
+  50% {
+    transform: translatex(-20px);
+  }
+  100% {
+    transform: translatex(0px);
+  }
+}
 section {
   animation: fade-in;
   animation-duration: 3s;
@@ -44,6 +55,10 @@ section {
 }
 .banner img {
   position: absolute;
+  animation: float;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 @media screen and (max-width: 850px) {
   .banner video {

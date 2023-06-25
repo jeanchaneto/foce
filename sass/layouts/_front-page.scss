@@ -1,3 +1,4 @@
+
 section {
   animation: fade-in;
   animation-duration: 3s;
@@ -9,6 +10,10 @@ section {
   position: relative;
   img {
     position: absolute;
+    animation: float;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
   }
   @media screen and (max-width: 850px) {
     video {
