@@ -5,6 +5,18 @@ section {
   animation-fill-mode: both;
 }
 
+.banner {
+  position: relative;
+  img {
+    position: absolute;
+  }
+  @media screen and (max-width: 850px) {
+    video {
+      display: none;
+    }
+  }
+}
+
 h2 {
   overflow: hidden;
 }

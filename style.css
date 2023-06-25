@@ -39,6 +39,18 @@ section {
   animation-fill-mode: both;
 }
 
+.banner {
+  position: relative;
+}
+.banner img {
+  position: absolute;
+}
+@media screen and (max-width: 850px) {
+  .banner video {
+    display: none;
+  }
+}
+
 h2 {
   overflow: hidden;
 }
