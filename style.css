@@ -24,11 +24,39 @@
     transform: rotate(360deg);
   }
 }
+@keyframes slide-up {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 section {
   animation: fade-in;
   animation-duration: 3s;
   animation-timing-function: ease;
   animation-fill-mode: both;
+}
+
+h2 {
+  overflow: hidden;
+}
+
+.title-to-animate {
+  opacity: 0;
+}
+
+.animate-title {
+  animation: slide-up;
+  animation-duration: 2s;
+  display: block;
+  animation-fill-mode: both;
+  opacity: 1;
+}
+
+.title-animation-delay {
+  animation-delay: 1s;
 }
 
 #oscar-nomination {

@@ -5,6 +5,26 @@ section {
   animation-fill-mode: both;
 }
 
+h2 {
+  overflow: hidden;
+}
+
+.title-to-animate {
+  opacity: 0;
+}
+
+.animate-title {
+  animation: slide-up;
+  animation-duration: 2s;
+  display: block;
+  animation-fill-mode: both;
+  opacity: 1;
+}
+
+.title-animation-delay {
+  animation-delay: 1s;
+}
+
 #oscar-nomination {
   position: relative;
   display: flex;
