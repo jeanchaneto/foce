@@ -20,5 +20,8 @@
   "homepage": "https://github.com/jeanchaneto/foce#readme",
   "devDependencies": {
     "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "swiper": "^9.4.1"
   }
 }
