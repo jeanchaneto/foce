@@ -43,6 +43,28 @@
     transform: translatex(0px);
   }
 }
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 section {
   animation: fade-in;
   animation-duration: 3s;
@@ -154,10 +176,18 @@ h2 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   #oscar-nomination::after {
     display: none;
   }
+}
+
+.main-character {
+  width: 100vw;
+}
+
+#place {
+  background-image: url("./assets/images/Studio_Koukaki-image_place.png") !important;
 }
 
 .story__article::after, .story h2::after, .site-footer::before, .site-footer::after, #studio h2::before {
@@ -176,24 +206,6 @@ h2 {
 }
 .site-footer::after {
   opacity: 0;
-}
-
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 400px;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
