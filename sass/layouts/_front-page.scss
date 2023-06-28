@@ -118,4 +118,27 @@ h2 {
 
 #place {
   background-image: url("./assets/images/Studio_Koukaki-image_place.png") !important;
+  position: relative;
+}
+
+.big-cloud {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.little-cloud {
+  position: absolute;
+  top: 33%;
+  right: 40%;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.animate-cloud {
+  animation: cloud-animation;
+  animation-duration: 3s;
 }

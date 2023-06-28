@@ -37,3 +37,12 @@
       transform: translatex(0px);
     }
   }
+
+  @keyframes cloud-animation {
+    from {
+        transform: translateX(-300px)
+    }
+    to {
+        transform: translateX(0px)
+    }
+  }

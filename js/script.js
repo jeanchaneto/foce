@@ -1,14 +1,13 @@
-
 //Titles animation
 
 const titlesToAnimate = document.querySelectorAll(".title-to-animate");
 
-const observer = new IntersectionObserver(
+const titlesObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle("animate-title", entry.isIntersecting);
       if (entry.isIntersecting) {
-        observer.unobserve(entry.target)
+        titlesObserver.unobserve(entry.target);
       }
     });
   },
@@ -16,12 +15,10 @@ const observer = new IntersectionObserver(
 );
 
 titlesToAnimate.forEach((title) => {
-    observer.observe(title);
-  });
+  titlesObserver.observe(title);
+});
 
-  const logo = document.getElementById('logo');
- ;
-
+const logo = document.getElementById("logo");
 //Swiper
 
 var swiper = new Swiper(".mySwiper", {
@@ -40,6 +37,23 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-  
 });
 
+//Cloud animation
+const cloudsToAnimate = document.querySelectorAll(".cloud");
+
+const cloudsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("animate-cloud", entry.isIntersecting);
+      if (entry.isIntersecting) {
+        cloudsObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 1 }
+);
+
+cloudsToAnimate.forEach((cloud) => {
+  cloudsObserver.observe(cloud);
+});

@@ -43,6 +43,14 @@
     transform: translatex(0px);
   }
 }
+@keyframes cloud-animation {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -188,6 +196,34 @@ h2 {
 
 #place {
   background-image: url("./assets/images/Studio_Koukaki-image_place.png") !important;
+  position: relative;
+}
+
+.big-cloud {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+@media screen and (max-width: 900px) {
+  .big-cloud {
+    display: none;
+  }
+}
+
+.little-cloud {
+  position: absolute;
+  top: 33%;
+  right: 40%;
+}
+@media screen and (max-width: 900px) {
+  .little-cloud {
+    display: none;
+  }
+}
+
+.animate-cloud {
+  animation: cloud-animation;
+  animation-duration: 3s;
 }
 
 .story__article::after, .story h2::after, .site-footer::before, .site-footer::after, #studio h2::before {
