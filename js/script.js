@@ -1,3 +1,30 @@
+
+//Banner logo parrallax
+const banner = document.querySelector('.banner')
+const bannerImage = document.querySelector('.banner img')
+let bannerImageMarginTop = -10;
+bannerImage.style.marginTop = `${bannerImageMarginTop}%`;
+
+let lastScrollTop = 0;
+window.addEventListener('scroll', (e) => {
+    let scrollTop = window.scrollY;
+
+
+    if (scrollTop > lastScrollTop) {
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        if (bannerImageMarginTop <= 50) {
+            bannerImageMarginTop += 1
+        }
+    } else if (scrollTop < lastScrollTop) {
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        if (bannerImageMarginTop >= 10 && banner.getBoundingClientRect().bottom > 405) {
+            bannerImageMarginTop -= 1
+        }
+    } // else was horizontal scroll
+    bannerImage.style.marginTop = `${bannerImageMarginTop}%`;
+})
+
+
 //Titles animation
 
 const titlesToAnimate = document.querySelectorAll(".title-to-animate");
@@ -18,9 +45,7 @@ titlesToAnimate.forEach((title) => {
   titlesObserver.observe(title);
 });
 
-const logo = document.getElementById("logo");
 //Swiper
-
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,
@@ -57,3 +82,4 @@ const cloudsObserver = new IntersectionObserver(
 cloudsToAnimate.forEach((cloud) => {
   cloudsObserver.observe(cloud);
 });
+
