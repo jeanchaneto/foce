@@ -35,12 +35,32 @@
                     <span class="line"></span>
                 </button>
                 <ul>
-                    <li><a href="#story">Histoire</a></li>
-                    <li><a href="#characters">Personnages</a></li>
                     <li class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></li>
-                    <li><a href="#place">Lieu</a></li>
-                    <li><a href="#studio">Studio Koukaki</a></li>
                 </ul>
+
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modal-nav" >
+                            <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                                <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burgerm-logo.png' ?>" alt="logo">
+                            </a>
+                            <ul>
+                                <li><a href="#story">Histoire</a></li>
+                                <li><a href="#characters">Personnages</a></li>
+                                <li><a href="#place">Lieu</a></li>
+                                <li><a href="#studio">Studio Koukaki</a></li>
+                            </ul>
+                        </div>
+                        <img class="modal-flower-1" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/orchid.png' ?>" alt="orchid">
+                        <img class="modal-cat-1" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/blue-cat.png' ?>" alt="blue cat">
+                        <img class="modal-flower-2" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png' ?>" alt="Sunflower">
+                        <img class="modal-flower-3" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/stars-flower.png' ?>" alt="flower">
+                        <img class="modal-flower-4" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/small-p-flower.png' ?>" alt="small flower">
+                        <img class="modal-cat-2" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/gray-cat.png' ?>" alt="gray-cat">
+                        <img class="modal-cat-3" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/yellow-cat.png' ?>" alt="yellow cat">
+                        <img class="modal-flower-5" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/hibiscus-footer.png' ?>" alt="hibiscus">
+                    </div>
+                </div>
 
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
