@@ -51,6 +51,17 @@
     transform: translateX(0px);
   }
 }
+@keyframes modal-float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -268,6 +279,11 @@ h2 {
 .modal-content li {
   font-size: 64px;
 }
+.modal-content li a {
+  animation: slide-up;
+  animation-duration: 3s;
+  animation-delay: 250ms;
+}
 .modal-content li a:hover {
   color: black;
   text-shadow: 0px 0px 14px #ff5c00;
@@ -292,6 +308,24 @@ h2 {
 .modal-cat-2,
 .modal-cat-3 {
   position: absolute;
+}
+
+.modal-flower-1,
+.modal-flower-2,
+.modal-flower-3 {
+  animation: rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.modal-cat-1,
+.modal-cat-2,
+.modal-cat-3 {
+  animation: modal-float;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .modal-flower-1 {
@@ -334,6 +368,27 @@ h2 {
   bottom: 0;
   right: 0;
   transform: translateY(-25%);
+}
+
+.nav-menu {
+  width: 100vw;
+}
+
+#site-navigation {
+  width: 100vw;
+  position: relative;
+}
+
+#masthead {
+  width: 100vw;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 126px;
+  top: 26px;
+  cursor: pointer;
+  width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

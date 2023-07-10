@@ -21,6 +21,9 @@
   li {
     font-size: 64px;
     a {
+      animation: slide-up;
+      animation-duration: 3s;
+      animation-delay: 250ms;
       &:hover {
         color: black;
         text-shadow: 0px 0px 14px #ff5c00;
@@ -50,45 +53,84 @@
   position: absolute;
 }
 
-.modal-flower-1 {
-    top: 5vh;
-    left: -80px;
+.modal-flower-1,
+.modal-flower-2,
+.modal-flower-3
+ {
+  animation: rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
+.modal-cat-1,
+.modal-cat-2,
+.modal-cat-3 {
+animation: modal-float;
+animation-duration: 6s;
+animation-timing-function:  ease-in-out;
+animation-iteration-count:  infinite;
+}
+
+.modal-flower-1 {
+  top: 5vh;
+  left: -80px;
+}
 
 .modal-cat-1 {
-    top: 12vh;
-    left: 15vw;
+  top: 12vh;
+  left: 15vw;
 }
 
 .modal-flower-2 {
-    top: 8vh;
-    right: 15vw;
-    width: 216px;
+  top: 8vh;
+  right: 15vw;
+  width: 216px;
 }
 
 .modal-flower-3 {
-    top: 50vh;
-    left: 8vw;
+  top: 50vh;
+  left: 8vw;
 }
 
 .modal-flower-4 {
-    top: 45vh;
-    right: -6px;
+  top: 45vh;
+  right: -6px;
 }
 
 .modal-cat-2 {
-    top: 55vh;
-    right:15vw;
+  top: 55vh;
+  right: 15vw;
 }
 
 .modal-cat-3 {
-    bottom: 18vh;
-    left: 7vw;
+  bottom: 18vh;
+  left: 7vw;
 }
 
 .modal-flower-5 {
-    bottom: 0;
-    right: 0;
-    transform: translateY(-25%);
+  bottom: 0;
+  right: 0;
+  transform: translateY(-25%);
 }
+
+.nav-menu {
+ width: 100vw;
+}
+
+#site-navigation {
+  width: 100vw;
+  position: relative;
+ }
+
+ #masthead {
+  width: 100vw;
+ }
+
+ .modal-close-btn{
+  position: absolute;
+  right: 126px;
+  top: 26px;
+  cursor: pointer;
+  width: 30px;
+ }

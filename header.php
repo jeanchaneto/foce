@@ -37,7 +37,7 @@
                 <ul>
                     <li class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></li>
                 </ul>
-
+                <img class="modal-close-btn" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/close-burger.png' ?>" alt="close modal">
                 <div class="modal">
                     <div class="modal-content">
                         <div class="modal-nav" >
