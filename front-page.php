@@ -10,7 +10,7 @@ get_header();
             <source src="<?php echo get_stylesheet_directory_uri() . '/assets/videos/header-video.mp4'; ?>" type="video/mp4">
         </video>
     </section>
-    <section id="#story" class="story">
+    <section id="story" class="story">
         <h2><span class="title-to-animate">L'histoire</span></h2>
         <article id="" class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>

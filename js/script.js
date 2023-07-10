@@ -87,21 +87,26 @@ cloudsToAnimate.forEach((cloud) => {
 const burgerMenuBtn = document.querySelector(".modal-toggle");
 const menuModal = document.querySelector(".modal");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
+const modalMenuItems = document.querySelectorAll(".modal-nav ul li a");
 
 //Open modal
 burgerMenuBtn.addEventListener("click", openModal);
 function openModal() {
-  menuModal.style.display='block';
-  burgerMenuBtn.style.display='none';
-  modalCloseBtn.style.display='block';
-  menuModal.classList.toggle('modal-fade-in');
+  menuModal.style.display = "block";
+  burgerMenuBtn.style.display = "none";
+  modalCloseBtn.style.display = "block";
+  menuModal.classList.toggle("modal-fade-in");
 }
 
 //Close modal
 modalCloseBtn.addEventListener("click", closeModal);
+modalMenuItems.forEach((item) => {
+  item.addEventListener("click", closeModal);
+});
+
 function closeModal() {
-  menuModal.style.display='none';
-  burgerMenuBtn.style.display='block';
-  modalCloseBtn.style.display='none';
-  menuModal.classList.toggle('modal-fade-in');
+  menuModal.style.display = "none";
+  burgerMenuBtn.style.display = "block";
+  modalCloseBtn.style.display = "none";
+  menuModal.classList.toggle("modal-fade-in");
 }

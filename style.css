@@ -180,7 +180,7 @@ h2 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1280px) {
   #oscar-nomination::before {
     display: none;
   }
@@ -264,7 +264,7 @@ h2 {
   height: 100%;
   display: none;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 699px) {
   .modal {
     top: 0;
   }
@@ -444,6 +444,10 @@ h2 {
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.main-navigation.toggled ul {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
