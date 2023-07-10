@@ -29,7 +29,7 @@
 
         <header id="masthead" class="site-header">
             <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <button class="modal-toggle" aria-controls="modal-menu" aria-expanded="false">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -59,6 +59,7 @@
                         <img class="modal-cat-2" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/gray-cat.png' ?>" alt="gray-cat">
                         <img class="modal-cat-3" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/yellow-cat.png' ?>" alt="yellow cat">
                         <img class="modal-flower-5" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/hibiscus-footer.png' ?>" alt="hibiscus">
+                        <p class="modal-credits" >STUDIO KOUKAKI</p>
                     </div>
                 </div>
 

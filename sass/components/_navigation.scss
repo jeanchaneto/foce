@@ -5,6 +5,17 @@
   top: 80px;
   width: 100%;
   height: 100%;
+  display: none;
+  @media screen and (max-width: 480px) {
+    top: 0;
+  }
+}
+
+.modal-fade-in {
+  animation: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
 }
 
 .modal-content {
@@ -17,9 +28,16 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
+    @media screen and (max-width: 480px) {
+      display: block;
+    }
   }
   li {
     font-size: 64px;
+    @media screen and (max-width: 480px) {
+      font-size: 24px;
+      display: block;
+    }
     a {
       animation: slide-up;
       animation-duration: 3s;
@@ -51,12 +69,14 @@
 .modal-cat-2,
 .modal-cat-3 {
   position: absolute;
+  @media screen and (max-width: 850px){
+    display: none;
+  }
 }
 
 .modal-flower-1,
 .modal-flower-2,
-.modal-flower-3
- {
+.modal-flower-3 {
   animation: rotate;
   animation-duration: 20s;
   animation-iteration-count: infinite;
@@ -66,10 +86,10 @@
 .modal-cat-1,
 .modal-cat-2,
 .modal-cat-3 {
-animation: modal-float;
-animation-duration: 6s;
-animation-timing-function:  ease-in-out;
-animation-iteration-count:  infinite;
+  animation: modal-float;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .modal-flower-1 {
@@ -114,23 +134,38 @@ animation-iteration-count:  infinite;
   transform: translateY(-25%);
 }
 
-.nav-menu {
- width: 100vw;
+#site-navigation {
+  position: relative;
 }
 
-#site-navigation {
-  width: 100vw;
-  position: relative;
- }
-
- #masthead {
-  width: 100vw;
- }
-
- .modal-close-btn{
+.modal-close-btn {
   position: absolute;
   right: 126px;
   top: 26px;
   cursor: pointer;
   width: 30px;
- }
+  display: none;
+  z-index: 20;
+  @media screen and (max-width: 480px) { 
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.modal-toggle {
+  display: block;
+  @media screen and (min-width: 700px) {
+    position: absolute;
+    position: absolute;
+    right: 126px;
+    top: 26px;
+  }
+}
+
+.modal-credits {
+  font-size: 18px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
