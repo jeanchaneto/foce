@@ -95,11 +95,17 @@ section {
   position: relative;
 }
 .banner img {
-  position: absolute;
+  position: sticky;
+  top: 30px;
+  left: 30%;
+  z-index: 1;
   animation: float;
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+.banner video {
+  position: absolute;
 }
 @media screen and (max-width: 850px) {
   .banner video {
@@ -180,7 +186,7 @@ h2 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 850px) {
   #oscar-nomination::before {
     display: none;
   }
@@ -264,7 +270,7 @@ h2 {
   height: 100%;
   display: none;
 }
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 480px) {
   .modal {
     top: 0;
   }
@@ -446,7 +452,7 @@ h2 {
   transform: translateX(-50%);
 }
 
-.main-navigation.toggled ul {
+.main-navigation.toggled .modal-menu {
   display: flex;
 }
 

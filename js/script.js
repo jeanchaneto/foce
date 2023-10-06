@@ -1,30 +1,3 @@
-//Banner logo parrallax
-const banner = document.querySelector(".banner");
-const bannerImage = document.querySelector(".banner img");
-let bannerImageMarginTop = -10;
-bannerImage.style.marginTop = `${bannerImageMarginTop}%`;
-
-let lastScrollTop = 0;
-window.addEventListener("scroll", (e) => {
-  let scrollTop = window.scrollY;
-
-  if (scrollTop > lastScrollTop) {
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    if (bannerImageMarginTop <= 50) {
-      bannerImageMarginTop += 1;
-    }
-  } else if (scrollTop < lastScrollTop) {
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    if (
-      bannerImageMarginTop >= 10 &&
-      banner.getBoundingClientRect().bottom > 405
-    ) {
-      bannerImageMarginTop -= 1;
-    }
-  } // else was horizontal scroll
-  bannerImage.style.marginTop = `${bannerImageMarginTop}%`;
-});
-
 //Titles animation
 
 const titlesToAnimate = document.querySelectorAll(".title-to-animate");
@@ -87,26 +60,21 @@ cloudsToAnimate.forEach((cloud) => {
 const burgerMenuBtn = document.querySelector(".modal-toggle");
 const menuModal = document.querySelector(".modal");
 const modalCloseBtn = document.querySelector(".modal-close-btn");
-const modalMenuItems = document.querySelectorAll(".modal-nav ul li a");
 
 //Open modal
 burgerMenuBtn.addEventListener("click", openModal);
 function openModal() {
-  menuModal.style.display = "block";
-  burgerMenuBtn.style.display = "none";
-  modalCloseBtn.style.display = "block";
-  menuModal.classList.toggle("modal-fade-in");
+  menuModal.style.display='block';
+  burgerMenuBtn.style.display='none';
+  modalCloseBtn.style.display='block';
+  menuModal.classList.toggle('modal-fade-in');
 }
 
 //Close modal
 modalCloseBtn.addEventListener("click", closeModal);
-modalMenuItems.forEach((item) => {
-  item.addEventListener("click", closeModal);
-});
-
 function closeModal() {
-  menuModal.style.display = "none";
-  burgerMenuBtn.style.display = "block";
-  modalCloseBtn.style.display = "none";
-  menuModal.classList.toggle("modal-fade-in");
+  menuModal.style.display='none';
+  burgerMenuBtn.style.display='block';
+  modalCloseBtn.style.display='none';
+  menuModal.classList.toggle('modal-fade-in');
 }

@@ -12,11 +12,18 @@ section {
 .banner {
   position: relative;
   img {
-    position: absolute;
+    position: sticky;
+    top: 30px;
+    left: 30%;
+    z-index: 1;
     animation: float;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+  }
+
+  video {
+    position: absolute;
   }
 
   @media screen and (max-width: 850px) {
@@ -93,7 +100,7 @@ h2 {
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 850px) {
       display: none;
     }
   }

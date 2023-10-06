@@ -44,7 +44,7 @@
                             <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                                 <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/burgerm-logo.png' ?>" alt="logo">
                             </a>
-                            <ul>
+                            <ul class="modal-menu">
                                 <li><a href="#story">Histoire</a></li>
                                 <li><a href="#characters">Personnages</a></li>
                                 <li><a href="#place">Lieu</a></li>
